@@ -144,6 +144,8 @@ function draw() {
  // ellipseMode(RADIUS);
   ellipse(polygon.position.x,polygon.position.y,20);
   slingShot.display();
+
+  keyPressed();
 }
 
 function mouseDragged(){
@@ -153,4 +155,13 @@ function mouseDragged(){
 function mouseReleased(){
   slingShot.fly();
 }
+
+function keyPressed(){
+  if (keyCode===32){
+    slingshot.attach(this.polygon);
+  }
+}
+
+
+
 
